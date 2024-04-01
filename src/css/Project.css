@@ -1,0 +1,29 @@
+.customButton {
+    border: 0px solid;
+    margin: 0 auto;
+    width: 500px;
+    height: 90px;
+    line-height: 90px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    border-radius: 40px;
+    background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+    background-size: 600%;
+    -webkit-animation: anime 9s linear infinite;
+    animation: anime 9s linear infinite;
+    transition: all .2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 15px 10px;
+}
+@keyframes anime {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
