@@ -24,10 +24,10 @@ export default function AboutMe() {
                       <p><span style={{ fontWeight: 'bolder' }} className="title-s">Profile: </span> <span>full stack
                         developer</span></p>
                       <p className="lol"><span style={{ fontWeight: 'bolder' }} className="title-s">Email: </span>
-                        <span><a className='' href="mailto: noureldin2662002@gmail.com"> noureldin2662002@gmail.com</a></span>
+                        <span className=''><a className='darkLink' href="mailto: noureldin2662002@gmail.com"> noureldin2662002@gmail.com</a></span>
 
                       </p>
-                      <p><span style={{ fontWeight: 'bolder' }} className="title-s">Phone: </span> <a href="tel:+201116074576">01116074576</a>
+                      <p className=''><span style={{ fontWeight: 'bolder' }} className="title-s">Phone: </span> <a className='darkLink' href="tel:+201116074576">01116074576</a>
                       </p>
                     </div>
                   </div>
@@ -37,19 +37,19 @@ export default function AboutMe() {
                   <ul>
                     <li>Programming Languages: JavaScript, C#</li>
                     <li>Web Technologies: ASP.NET, React, Firebase</li>
-                    <li>Databases: MS SQL, Firestore DB</li>
+                    <li>Databases: MS SQL, Firestore DB, mongoDB</li>
                     <li>Version Control: Git</li>
                     <li>Problem Solving and Analytical Skills</li>
                     <li>Strong Communication and Teamwork Skills</li>
                     <li>Attention to Detail and Time Management</li>
-                    <li>Languages : Arabic (Native speaker)
-                      <div className="progress">
+                    <li>Languages : Arabic (Native speaker) <br />
+                      {/* <div className="progress">
                         <div className="progress-bar customBg" role="progressbar" style={{ width: '100%' }} aria-valuenow={90} aria-valuemin={0} aria-valuemax={100}>100%</div>
-                      </div>
+                      </div> */}
                       and English (Fluent Speaker)
-                      <div className="progress">
+                      {/* <div className="progress">
                         <div className="progress-bar customBg" role="progressbar" style={{ width: '100%' }} aria-valuenow={90} aria-valuemin={0} aria-valuemax={100}>100%</div>
-                      </div>
+                      </div> */}
                     </li>
                   </ul>
                 </div>
@@ -87,11 +87,11 @@ export default function AboutMe() {
                     Russian Culture Center: Web Developing Diploma
                   </p>
                   <p className="lead lol">
-                    Route Center: <a target="_blank" href="https://drive.google.com/file/d/10Gaw1bTCEkAmWiZolVl1mQXwldf5uKyB/view?usp=sharing">Full-Stack
+                    Route Center: <a className='darkLink' target="_blank" href="https://drive.google.com/file/d/10Gaw1bTCEkAmWiZolVl1mQXwldf5uKyB/view?usp=sharing">Full-Stack
                       Diploma</a>
                   </p>
                   <a href="pdfs/My_CV.pdf" target="_blank" download>
-                    <button id="cvBtn" className="btn text-light customBg w-100">Download CV</button>
+                    <button id="cvBtn" className="btn text-light orange w-100">Download CV</button>
                   </a>
                 </div>
               </div>
@@ -107,6 +107,7 @@ export default function AboutMe() {
           <ul>
             <li>Bootstrap</li>
             <li>jQuery</li>
+            <li>Framer-motion</li>
             <li>React-Router-Dom</li>
             <li>React-Pro-Sidebar</li>
             <li>ParticlesJS</li>
@@ -125,6 +126,11 @@ export default function AboutMe() {
             <li>Nodemailer</li>
             <li>Express</li>
             <li>Axios</li>
+            <li>Socket.IO</li>
+            <li>Joi</li>
+            <li>jsonwebtoken</li>
+            <li>GraphQL </li>
+            <li>Nodemon </li>
             <li>Mongoose</li>
             <li>Sequelize</li>
             <li>Bcrypt</li>

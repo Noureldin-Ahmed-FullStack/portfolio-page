@@ -69,10 +69,12 @@ function App() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <ul className="navbar-nav ms-auto font-1">
-                        <li className="nav-item"><a className="nav-link cursor" onClick={() => scrollToSection("top")} >HOME</a></li>
-                        <li className="nav-item"><a className="nav-link cursor" onClick={() => scrollToSection("about")} >ABOUT</a></li>
-                        <li className="nav-item"><a className="nav-link cursor" onClick={() => scrollToSection("courses")} >COURSES</a></li>
-                        <li className="nav-item"><a className="nav-link cursor" onClick={() => scrollToSection("projects")} >PROJECT</a></li>
+                        <li className="nav-item mx-3"><a className="nav-link cursor" onClick={() => scrollToSection("top")} >HOME</a></li>
+                        <li className="nav-item mx-3"><a className="nav-link cursor" onClick={() => scrollToSection("about")} >ABOUT</a></li>
+                        <li className="nav-item mx-3"><a className="nav-link cursor" onClick={() => scrollToSection("courses")} >COURSES</a></li>
+                        <li className="nav-item mx-3"><a className="nav-link cursor" onClick={() => scrollToSection("projects")} >PROJECT</a></li>
+                        <li className="nav-item "><a href='https://github.com/Noureldin-Ahmed-FullStack' target='_blank' className="nav-link cursor" ><i className='fa-brands fa-github'></i></a></li>
+                        <li className="nav-item "><a href='https://www.linkedin.com/in/noureldin-ahmed-7849801a7/' target='_blank' className="nav-link cursor" ><i className='fa-brands fa-linkedin'></i></a></li>
                         <li className="nav-item"><a className="nav-link cursor" onClick={() => toggleDarkmode()} ><i className={`${darkMode ? 'fa' : 'fa-regular'} fa-moon`}></i></a></li>
                     </ul>
                 </Navbar.Collapse>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { loadSlim } from "tsparticles-slim";
+import { TypeAnimation } from 'react-type-animation';
 import { useCallback, useMemo } from "react";
 import "../css/ParticleDiv.css";
 // import { loadBasic } from "@tsparticles/basic";
@@ -126,7 +127,23 @@ export default function ParticleDiv() {
       {init && <Particles id="tsparticles" options={options} />}
       <img className='MainLogo' src={require('../Img/BG Logo.png')} alt="" />
       <h1 className='bgText'>Noureldin</h1>
-      <h5 className='kopius'>Web Developer</h5>
+      {/* <h5 className='kopius'>Web Developer</h5> */}
+      <TypeAnimation
+      className='kopius typer'
+        sequence={[
+          // Same substring at the start will only be typed out once, initially
+          'Web Developer',
+          1000, // wait 1s before replacing "Mice" with "Hamsters"
+          'M.E.R.N stack engineer',
+          1000,
+          'Full stack web Developer',
+          1000,
+        ]}
+        wrapper="span"
+        speed={50}
+        style={{ fontSize: '1.5em', display: 'inline-block' }}
+        repeat={Infinity}
+      />
     </div>
   )
 }

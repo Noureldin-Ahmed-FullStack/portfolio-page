@@ -32,7 +32,7 @@ export default function Projects() {
 
     return (
 
-        <section id="projects" className="  route">
+        <section id="projects" className="mb-3  route">
             <div className="container cont">
                 <div className="row">
                     <div className="col-sm-12">
@@ -46,7 +46,7 @@ export default function Projects() {
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <div className>
+                        <div>
                             <div className="container">
                                 <div className="service-content">
 
@@ -55,7 +55,7 @@ export default function Projects() {
                         </div>
                     </div>
                     <h2 className="lul-title">My Route Front-End Projects</h2>
-                    <p>Assignments given by <a className="link-primary" target="_blank" href="https://www.facebook.com/Routelearning">Route Center</a> <em>Eng: </em><a className="link-primary" target="_blank" href="https://www.facebook.com/ahmedmu3ti"><strong>Ahmed Mu3ti</strong></a>.</p>
+                    <p>Assignments given by <a className=" darkLink" target="_blank" href="https://www.facebook.com/Routelearning">Route Center</a> <em className=''>Eng: </em><a className="darkLink" target="_blank" href="https://www.facebook.com/ahmedmu3ti"><strong>Ahmed Mu3ti</strong></a>.</p>
                 </div>
                 <div className="CappedHeight">
 
@@ -80,7 +80,7 @@ export default function Projects() {
                                         </motion.iframe>
 
                                         <p className="s-description">
-                                            {item.desc}  <a target="_blank" style={{ margin: '0 10px' }} className="btn btn-success text-light" href={item.link}>Visitsite</a>
+                                            {item.desc}  <a target="_blank" style={{ margin: '0 10px' }} className="btn btn-success text-light" href={item.link}>Visit site</a>
                                         </p>
                                     </div>
                                 </div>
