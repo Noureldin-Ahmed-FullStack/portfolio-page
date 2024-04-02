@@ -6,12 +6,14 @@
 
 
     --primary-colorDark: #e600e9;
+    --aqua: #3cf0c5;
     --secondary-colorDark: #e58c12;
     /* --secondary-colorDark: #0b71df; */
 
-    --bg-white: #fff;
+    --bg-container: #fff;
     --bg-grey: #eee;
     --text-grey: #212529;
+    --paragraph-grey:rgba(53, 53, 53, 0.774);
 
 
     --bg-dark-white: #47474798;
@@ -22,10 +24,20 @@
     
   }
   [data-theme="dark"] {
-    --bg-white: #1e1e1e;
+    --bg-container: #1e1e1e;
     --bg-grey: #2e2e2e;
     --text-grey: #ffffff;
-    --links: #e58c12;
+    --paragraph-grey:rgba(184, 184, 184, 0.774);
+    --links: #843f99;
+
+
+    --primary-color: #727272;
+    --secondary-color: #030303;
+    --primary-colorDark: #999999;
+    --aqua: #464646;
+  }
+  .greyParagraph{
+    color: var(--paragraph-grey);
   }
   #cvBtn:hover{
     font-weight: 900;
@@ -33,9 +45,14 @@
   .orange{
     background-color: var(--links) !important;
   }
-
+.grab{
+  cursor: grab;
+}
+.grab:active{
+  cursor: grabbing;
+}
 .gradient-text {
-  background-image: linear-gradient(-45deg, #e58c12, #e600e9, #1436f0, #3cf0c5);
+  background: linear-gradient(-45deg, #e58c12, #e600e9, #1436f0, #3cf0c5);
   background-size: 600%;
   -webkit-animation: anime 9s linear infinite;
   animation: anime 9s linear infinite;
@@ -44,14 +61,14 @@
   background-clip: text;
   color: transparent;
 }
-.customBg {
+/* .customBg {
 
     background: linear-gradient(-45deg, #e58c12, #e600e9, #1436f0, #3cf0c5);
     background-size: 600%;
     -webkit-animation: anime 9s linear infinite;
     animation: anime 9s linear infinite;
     transition: all .2s ease-in-out;
-  }
+  } */
   
   @keyframes anime {
     0% {
@@ -257,7 +274,8 @@ body{
     font-size: 1.2rem;
     text-align: left;
     color: var(--text-grey);
-    background-color: var(--bg-white);
+    background-color: var(--bg-container);
+    transition: all 0.5s ease-in-out;
     border-radius: 15px;
 }
 .lol a{
@@ -276,7 +294,7 @@ body{
     border-radius: 1rem;
     
 
-    background: linear-gradient(-45deg, #e58c12, #e600e9, #1436f0, #3cf0c5);
+    background-image: linear-gradient(-45deg, var(--primary-color), var(--primary-colorDark), var(--secondary-color),  var(--aqua));
     background-size: 600%;
     -webkit-animation: anime 9s linear infinite;
     animation: anime 9s linear infinite;

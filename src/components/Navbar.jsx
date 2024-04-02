@@ -12,14 +12,14 @@ function App() {
     const [isDark, setIsDark] = useState(false);
 
     const setDarkmodeFunc = () => {
-            setDarkmode(false);
-            document.querySelector("body").setAttribute('data-theme', 'dark')
-            const theme = localStorage.setItem('theme',"dark")
+        setDarkmode(false);
+        document.querySelector("body").setAttribute('data-theme', 'dark')
+        const theme = localStorage.setItem('theme', "dark")
     }
     const setLightmodeFunc = () => {
-            setDarkmode(true);
-            document.querySelector("body").setAttribute('data-theme', 'light')
-            const theme = localStorage.setItem('theme',"light")
+        setDarkmode(true);
+        document.querySelector("body").setAttribute('data-theme', 'light')
+        const theme = localStorage.setItem('theme', "light")
     }
     const toggleDarkmode = () => {
         const bodyElement = document.querySelector("body");
@@ -73,9 +73,9 @@ function App() {
                         <li className="nav-item mx-3"><a className="nav-link cursor" onClick={() => scrollToSection("about")} >ABOUT</a></li>
                         <li className="nav-item mx-3"><a className="nav-link cursor" onClick={() => scrollToSection("courses")} >COURSES</a></li>
                         <li className="nav-item mx-3"><a className="nav-link cursor" onClick={() => scrollToSection("projects")} >PROJECT</a></li>
-                        <li className="nav-item "><a href='https://github.com/Noureldin-Ahmed-FullStack' target='_blank' className="nav-link cursor" ><i className='fa-brands fa-github'></i></a></li>
-                        <li className="nav-item "><a href='https://www.linkedin.com/in/noureldin-ahmed-7849801a7/' target='_blank' className="nav-link cursor" ><i className='fa-brands fa-linkedin'></i></a></li>
-                        <li className="nav-item"><a className="nav-link cursor" onClick={() => toggleDarkmode()} ><i className={`${darkMode ? 'fa' : 'fa-regular'} fa-moon`}></i></a></li>
+                        <li className="nav-item "><a title='Github' href='https://github.com/Noureldin-Ahmed-FullStack' target='_blank' className="nav-link cursor" ><i className='fa-brands fa-github'></i></a></li>
+                        <li className="nav-item "><a title='Linkedin' href='https://www.linkedin.com/in/noureldin-ahmed-7849801a7/' target='_blank' className="nav-link cursor" ><i className='fa-brands fa-linkedin'></i></a></li>
+                        <li className="nav-item "><a title='Darkmode' className="nav-link cursor" onClick={() => toggleDarkmode()} ><i className={`${darkMode ? 'fa' : 'fa-regular'} fa-moon`}></i></a></li>
                     </ul>
                 </Navbar.Collapse>
             </Container>

@@ -123,27 +123,44 @@ export default function ParticleDiv() {
   }, []);
 
   return (
-    <div className="behindParticles merienda d-flex flex-column">
+    <div className="behindParticles text-left d-flex flex-column">
       {init && <Particles id="tsparticles" options={options} />}
-      <img className='MainLogo' src={require('../Img/BG Logo.png')} alt="" />
-      <h1 className='bgText'>Noureldin</h1>
-      {/* <h5 className='kopius'>Web Developer</h5> */}
-      <TypeAnimation
-      className='kopius typer'
-        sequence={[
-          // Same substring at the start will only be typed out once, initially
-          'Web Developer',
-          1000, // wait 1s before replacing "Mice" with "Hamsters"
-          'M.E.R.N stack engineer',
-          1000,
-          'Full stack web Developer',
-          1000,
-        ]}
-        wrapper="span"
-        speed={50}
-        style={{ fontSize: '1.5em', display: 'inline-block' }}
-        repeat={Infinity}
-      />
+      <div className='row w-100 justify-content-between'>
+        <div className="col-md-7 d-flex flex-column justify-content-center">
+          <h1>welcome to my Portfolio</h1>
+          <h2>
+          <TypeAnimation
+            className=' typer'
+            sequence={[
+              // Same substring at the start will only be typed out once, initially
+              "Hi! I'm Nour",
+              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              "Hi! I'm  a Web Developer",
+              1000,
+              "Hi! I'm  a M.E.R.N stack engineer",
+              1000,
+              "Hi! I'm  a Full stack web Developer",
+              1000,
+            ]}
+            wrapper="span"
+            speed={50}
+            style={{ fontSize: '1.5em', display: 'inline-block' }}
+            repeat={Infinity}
+          />
+          </h2>
+          
+          <p className='aboutParagraph'>
+          Motivated computer science student proficient in JavaScript, MS SQL, HTML, CSS, Bootstrap, and React, eager to apply skills in dynamic team environments for real-world software development experience.
+          </p>
+        </div>
+        <div className="col-md-5 d-flex merienda flex-column justify-content-center align-items-center my-order-md-first">
+          <img className='MainLogo' src={require('../Img/BG Logo.png')} alt="" />
+          {/* <h1 className='bgText'>Noureldin</h1> */}
+
+        </div>
+
+      </div>
+
     </div>
   )
 }

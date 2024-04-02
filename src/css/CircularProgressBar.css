@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #e58c12;
+  --secondary-color: #1436f0;
+
+
+  --primary-colorDark: #e600e9;
+  --secondary-colorDark: #e58c12;
+
+  --bg-white: #fff;
+  --bg-grey: #eee;
+  --text-grey: #212529;
+
+
+  --bg-dark-white: #47474798;
+  --bg-dark-grey: #1e1e1e;
+  --text-white: #fff;
+
+  --links: #1436f0;
+
+}
+
+[data-theme="dark"] {
+  --bg-white: #1e1e1e;
+  --bg-grey: #2e2e2e;
+  --text-grey: #ffffff;
+  /* --links: #8003a7; */
+}
+
+.progress-ring-circle {
+  transform: rotate(-20deg);
+  transform-origin: 70.5% 20.5%;
+}
+
+.firstCircle {
+  stroke: #ccc;
+}
+
+.respText {
+  fill: var(--text-grey);
+}
+
+.secondCircle {
+  stroke: url(#gradient);
+}
+
+.progress-ring {
+  display: block;
+  margin: 0px auto;
+}
+
+.noStroke {
+  stroke: transparent;
+}

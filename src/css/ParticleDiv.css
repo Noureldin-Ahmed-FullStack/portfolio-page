@@ -3,7 +3,7 @@
 .behindParticles {
   /* background-color: #88CDFF; */
   /* background-image: linear-gradient(135deg,#e58c12, #1436f0) ; */
-  background: linear-gradient(135deg, #e58c12, #e600e9, #1436f0, #3cf0c5);
+  background-image: linear-gradient(-45deg, var(--primary-color), var(--primary-colorDark), var(--secondary-color), var(--aqua));
   background-size: 600%;
   -webkit-animation: anime 9s linear infinite;
   animation: anime 9s linear infinite;
@@ -19,12 +19,35 @@
   justify-content: center;
   align-items: center;
 }
-.typer{
-  height: 32px;
+
+.aboutParagraph {
+  font-size: 22px;
+  width: 80%;
+  color: rgba(240, 248, 255, 0.822);
 }
+
+@media screen and (max-width: 768px) {
+
+  /* Your CSS rules for screens with 768 pixels or less width */
+  .my-order-md-first {
+    order: -1 !important
+  }
+}
+
+@media screen and (max-width: 1278px) {
+  .typer {
+    line-height: 1.2em;
+    /* Adjust the value as needed */
+    height: 2.4em;
+    /* 1.2em (line-height) * 2 (lines) = 2.4em */
+    overflow: hidden;
+    /* Optional: hide overflow content */
+  }
+}
+
 .customBg {
 
-  background: linear-gradient(-45deg, #e58c12, #e600e9, #1436f0, #3cf0c5);
+  background-image: linear-gradient(-45deg, var(--primary-color), var(--primary-colorDark), var(--secondary-color), var(--aqua));
   background-size: 600%;
   -webkit-animation: anime 9s linear infinite;
   animation: anime 9s linear infinite;
@@ -74,8 +97,8 @@
 }
 
 .MainLogo {
-  width: 12rem;
-  margin-bottom: 2rem;
+  width: 60%;
+  padding-bottom: 2rem;
 }
 
 .bgText {

@@ -6,6 +6,7 @@ import Courses from './Courses'
 import Projects from './Projects'
 import ExtraButtons from './ExtraButtons'
 import { MyContext } from './ContextProvider'
+import Skills from './Skills'
 
 export default function Layout() {
   const { darkMode, setDarkmode } = useContext(MyContext);
@@ -33,6 +34,7 @@ export default function Layout() {
       <Navbar />
       <ExtraButtons />
       <ParticleDiv />
+      <Skills />
       <AboutMe />
       <Courses />
       <Projects />

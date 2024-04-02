@@ -5,39 +5,21 @@ import pic1 from '../Img/AboutImage3.png';
 export default function AboutMe() {
   return (
  
-    <div id='about' className="container rounded-2 my-3 cont p-5 ">
+    <div id='about' className="container rounded-2 my-3 cont p-5 pt-3">
       <div className="row">
         <div className="col-sm-12">
           <div className="box-shadow-full">
+                <h2 className='text-center my-3'>More about me</h2>
             <div className="row">
               <div className="col-md-5 wow BounceInLeft" data-wow-offset={200} style={{ visibility: 'visible', animationName: 'bounceInLeft' }}>
                 <div className="row">
-                  <div className="col-sm-6 col-md-5 About ">
-                    <div>
-                      <img id="img" src={pic1} className="img-fluid rounded b-shadow-a" />
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-7 About">
-                    <div className="about-info my-2">
-                      <p><span style={{ fontWeight: 'bolder' }} className="title-s">Name: </span> <span>Noureldin Ahmed</span>
-                      </p>
-                      <p><span style={{ fontWeight: 'bolder' }} className="title-s">Profile: </span> <span>full stack
-                        developer</span></p>
-                      <p className="lol"><span style={{ fontWeight: 'bolder' }} className="title-s">Email: </span>
-                        <span className=''><a className='darkLink' href="mailto: noureldin2662002@gmail.com"> noureldin2662002@gmail.com</a></span>
-
-                      </p>
-                      <p className=''><span style={{ fontWeight: 'bolder' }} className="title-s">Phone: </span> <a className='darkLink' href="tel:+201116074576">01116074576</a>
-                      </p>
-                    </div>
-                  </div>
                 </div>
                 <div className="skill-mf my-2 wow bounceInUp" data-wow-offset={150} style={{ visibility: 'visible', animationName: 'bounceInUp' }}>
                   <p className="title-s lul-title">Skills</p>
                   <ul>
                     <li>Programming Languages: JavaScript, C#</li>
-                    <li>Web Technologies: ASP.NET, React, Firebase</li>
-                    <li>Databases: MS SQL, Firestore DB, mongoDB</li>
+                    <li>Web Technologies: NodeJS, React, Firebase</li>
+                    <li>Databases: mongoDB, MS SQL, Firestore DB</li>
                     <li>Version Control: Git</li>
                     <li>Problem Solving and Analytical Skills</li>
                     <li>Strong Communication and Teamwork Skills</li>
@@ -57,18 +39,7 @@ export default function AboutMe() {
               <div className="col-md-1" />
               <div className="col-md-6 wow BounceInRight" data-wow-offset={200} style={{ visibility: 'visible', animationName: 'bounceInRight' }}>
                 <div className="about-me pt-4 pt-md-0">
-                  <div className="title-box-2">
-                    <h5 className="title-left lul-title">
-                      About me
-                    </h5>
-                  </div>
-                  <p className="lead">
-                    Highly motivated and detail-oriented computer science student seeking
-                    opportunities to apply and enhance my skills in JavaScript, ASP.NET, C#, MS
-                    SQL, HTML, CSS, Bootstrap, and React (In progress). I am eager to contribute
-                    to a dynamic team and gain real-world experience in the field of software
-                    development.
-                  </p>
+                  
                   <div className="title-box-2">
                     <h5 className="title-left lul-title">
                       Education
@@ -84,11 +55,11 @@ export default function AboutMe() {
                     </h5>
                   </div>
                   <p className="lead">
-                    Russian Culture Center: Web Developing Diploma
+                    Russian Culture Center: Web Development Diploma
                   </p>
                   <p className="lead lol">
-                    Route Center: <a className='darkLink' target="_blank" href="https://drive.google.com/file/d/10Gaw1bTCEkAmWiZolVl1mQXwldf5uKyB/view?usp=sharing">Full-Stack
-                      Diploma</a>
+                    Route Center: <a className='darkLink text-decoration-none' target="_blank" href="https://drive.google.com/file/d/10Gaw1bTCEkAmWiZolVl1mQXwldf5uKyB/view?usp=sharing">Full-Stack
+                     Web Development Diploma</a>
                   </p>
                   <a href="pdfs/My_CV.pdf" target="_blank" download>
                     <button id="cvBtn" className="btn text-light orange w-100">Download CV</button>
