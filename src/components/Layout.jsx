@@ -7,6 +7,7 @@ import Projects from './Projects'
 import ExtraButtons from './ExtraButtons'
 import { MyContext } from './ContextProvider'
 import Skills from './Skills'
+import ContactMe from './ContactMe'
 
 export default function Layout() {
   const { darkMode, setDarkmode } = useContext(MyContext);
@@ -33,11 +34,12 @@ export default function Layout() {
     <div className='flex-grow-1 w-100'>
       <Navbar />
       <ExtraButtons />
-      <ParticleDiv />
+      {/* <ParticleDiv /> */}
       <Skills />
       <AboutMe />
       <Courses />
       <Projects />
+      <ContactMe />
     </div>
   )
 }

@@ -94,7 +94,7 @@ export default function Projects() {
                     <Nav variant='pills' className='mb-4' defaultActiveKey="/home">
 
                         <Nav.Item>
-                            <Nav.Link eventKey={"first"}>Front end</Nav.Link>
+                            <Nav.Link eventKey={"first"}>Frontend</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link eventKey={"second"}>Backend</Nav.Link>
@@ -176,8 +176,6 @@ export default function Projects() {
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 className="lul-title">My Route Front-End Projects</h2>
-                                    <p>Assignments given by <a className="link-primary" target="_blank" href="https://www.facebook.com/search/top?q=route">Route Center</a> <em>Eng: </em><a className="link-primary" target="_blank" href="https://www.facebook.com/ahmedmu3ti"><strong>Ahmed Mu3ti</strong></a>.</p>
                                 </div>
 
                             </Row>

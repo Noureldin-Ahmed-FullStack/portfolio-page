@@ -30,7 +30,7 @@ export default function Skills() {
                 <h2>Skills</h2>
                 <div className="d-flex justify-content-center">
 
-                <p className='w-75 greyParagraph'>Proficient in MERN stack, particularly skilled in ReactJS and NodeJS. Strong team player, adept at collaborative development within dynamic environments.</p>
+                <p className='w-75 greyParagraph text-justify'>Proficient in MERN stack, particularly skilled in ReactJS and NodeJS. Strong team player, adept at collaborative development within dynamic environments.</p>
                 </div>
                 <Carousel
                     className='grab'

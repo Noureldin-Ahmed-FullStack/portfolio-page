@@ -226,7 +226,9 @@ body{
 }
 
 @media screen and (max-width: 768px) {
-
+  .disappear-sm{
+    display: none;
+  }
   /* Your CSS rules for screens with 768 pixels or less width */
   .my-text-md-center {
     text-align: center !important;
