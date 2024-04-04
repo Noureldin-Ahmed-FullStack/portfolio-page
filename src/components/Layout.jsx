@@ -34,7 +34,7 @@ export default function Layout() {
     <div className='flex-grow-1 w-100'>
       <Navbar />
       <ExtraButtons />
-      {/* <ParticleDiv /> */}
+      <ParticleDiv />
       <Skills />
       <AboutMe />
       <Courses />
