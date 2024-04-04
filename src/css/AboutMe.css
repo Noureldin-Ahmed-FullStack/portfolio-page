@@ -51,6 +51,9 @@
 .grab:active{
   cursor: grabbing;
 }
+.Toastify{
+  z-index: 9000000000000;
+}
 .gradient-text {
   background: linear-gradient(-45deg, #e58c12, #e600e9, #1436f0, #3cf0c5);
   background-size: 600%;

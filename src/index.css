@@ -15,6 +15,7 @@ code {
 .myPos{
   bottom: 2rem;
   right: 2rem;
+  z-index: 100;
 }
 .ExtraButton{
   display: flex;

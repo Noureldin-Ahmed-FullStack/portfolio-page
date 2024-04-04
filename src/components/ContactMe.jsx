@@ -2,9 +2,12 @@ import React, { useEffect, useState, useMemo } from 'react'
 import '../css/ContactMe.css';
 import contactImg from '../Img/contact-img.svg';
 import { Col, Row } from 'react-bootstrap';
+import * as Yup from 'yup';
 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 
 export default function ContactMe() {
@@ -151,6 +154,76 @@ export default function ContactMe() {
 
     }, []);
     const [init, setInit] = useState(false);
+    const [formErrors, setFormErrors] = useState(null);
+    const [isSending, setIsSending] = useState(false);
+
+    const SchemaValidation = Yup.object().shape({
+        name: Yup.string().min(2, "Name must be at least 2 characters").max(20, "Name must cant be more than 20 characters").required("Name is required"),
+        email: Yup.string().email("Invalid email address").required("Email is required"),
+        phone: Yup.string().required("Phone is required").matches(/^[\+]?[(]?[0-9]{2,4}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,8}$/, "phone not valid"),
+    });
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        // console.log(e.target[0].value);
+        const body = {
+            'name': e.target[0].value + " " + e.target[1].value,
+            'email': e.target[2].value,
+            'phone': e.target[3].value,
+            'message': e.target[4].value,
+            'reciver': "noureldin2662002@gmail.com"
+        };
+        setIsSending(true)
+        const user = await SchemaValidation.validate(body, { strict: true }).catch((err) => {
+            console.log(err.message);
+            setFormErrors(err.message)
+            setIsSending(false)
+        })
+        if (user) {
+            let res = await axios.post(`https://ecommerce-server-tll5.onrender.com/ContactMe`, body).catch((err) => {
+                console.log(err);
+                setFormErrors(err)
+                toast.error(err, {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+                setIsSending(false)
+
+            })
+            if (res) {
+                console.log(res);
+                setFormErrors(null)
+                toast.success(`sent`, {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+                setIsSending(false)
+                e.target[0].value = null
+                e.target[1].value = null
+                e.target[2].value = null
+                e.target[3].value = null
+                e.target[4].value = null
+
+            }
+        }else{
+            
+            setIsSending(false)
+        }
+
+
+    }
 
     useEffect(() => {
         if (init) {
@@ -176,30 +249,32 @@ export default function ContactMe() {
                             </Col>
                             <Col md={6} className='d-flex flex-column'>
                                 <h2 className='mb-3'>Get in touch</h2>
+                                {formErrors && <div className='d-flex align-items-end mb-2 p-1 bg-danger-subtle text-danger-emphasis border-1 rounded-1'><h5 className='m-0 pe-1'>{formErrors}</h5> <h6 className='m-0 '>something wrong?</h6></div>}
+
                                 <div className="w-100 flex-grow-1 contact">
-                                    <form className='w-100 h-100  d-flex flex-column'>
+                                    <form onSubmit={handleSubmit} className='w-100 h-100  d-flex flex-column'>
                                         <Row className=' g-2'>
                                             <Col className=''>
-                                                <input className='' placeholder='First Name' type="text" name="" id="" />
+                                                <input required={false} className='' placeholder='First Name' type="text" name="Firstname" id="Firstname" />
                                             </Col>
                                             <Col className=''>
-                                                <input className='' placeholder='Last Name' type="text" name="" id="" />
+                                                <input required={false} className='' placeholder='Last Name' type="text" name="LastName" id="LastName" />
                                             </Col>
                                         </Row>
                                         <Row className=' g-2'>
                                             <Col className=''>
-                                                <input className='' placeholder='Email Address' type="text" name="" id="" />
+                                                <input required={false} className='' placeholder='Email Address' type="email" name="mail" id="mail" />
                                             </Col>
                                             <Col className=''>
-                                                <input className='' placeholder='Phone No.' type="text" name="" id="" />
+                                                <input required={false} className='' placeholder='Phone No.' type="tel" name="" id="" />
                                             </Col>
                                         </Row>
                                         <Row className='my-2 flex-grow-1'>
                                             <Col className='d-flex flex-column'>
-                                                <textarea className=' flex-grow-1' placeholder='Message' type="text" name="" id="" />
+                                                <textarea required={true} className=' flex-grow-1' placeholder='Message' type="text" name="" id="" />
                                             </Col>
                                         </Row>
-                                        <button className='m-0 rounded-3 border-0'><span>Send</span></button>
+                                        <button className='m-0 rounded-3 border-0'><span><i className='fa fa-paper-plane pe-2'></i>{(isSending && "Sending...") || "Send"}</span></button>
                                     </form>
                                 </div>
                             </Col>

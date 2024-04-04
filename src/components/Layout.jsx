@@ -8,6 +8,8 @@ import ExtraButtons from './ExtraButtons'
 import { MyContext } from './ContextProvider'
 import Skills from './Skills'
 import ContactMe from './ContactMe'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Layout() {
   const { darkMode, setDarkmode } = useContext(MyContext);
@@ -33,7 +35,8 @@ export default function Layout() {
   return (
     <div className='flex-grow-1 w-100'>
       <Navbar />
-      <ExtraButtons />
+      <ExtraButtons />      
+      <ToastContainer />
       <ParticleDiv />
       <Skills />
       <AboutMe />
