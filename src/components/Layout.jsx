@@ -39,7 +39,6 @@ export default function Layout() {
       <ToastContainer />
       <ParticleDiv />
       <Skills />
-      {/* <FancyButton /> */}
       <AboutMe />
       <Courses />
       <Projects />

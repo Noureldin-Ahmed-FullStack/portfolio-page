@@ -60,7 +60,7 @@ export default function AboutMe() {
                       Courses done:
                     </h5>
                   </div>
-                  <Reveal>
+                  <Reveal width='full'>
                     <p className="lead">
                       Russian Culture Center: Web Development Diploma
                     </p>

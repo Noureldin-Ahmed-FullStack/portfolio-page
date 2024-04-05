@@ -109,30 +109,7 @@ export default function Projects() {
                             {/* <p>Assignments given by <a className=" darkLink" target="_blank" href="https://www.facebook.com/Routelearning">Route Center</a> <em className=''>Eng: </em><a className="darkLink" target="_blank" href="https://www.facebook.com/ahmedmu3ti"><strong>Ahmed Mu3ti</strong></a>.</p> */}
                             <Row className='gy-3 pb-2'>
                                 {FrontEnd.map((item, index) => (
-                                    // <div className="col-lg-6" key={index}>
-                                    //     <div className="service-box wow bounceInLeft">
-                                    //         <div className="service-content flex-column">
-                                    //             <div className='d-flex justify-content-center align-items-center mb-3'>
-
-                                    //                 <a className='frameTitle lul-title' target="_blank" href={item.link}>{item.title}</a>
-                                    //                 <button onClick={() => toggleVisibility(index)} className="btn btn-outline-light myShow"><i className="fa-solid fa-arrow-down-wide-short" style={{ fontSize: 25 }} /></button>
-                                    //             </div>
-                                    //             <motion.iframe
-                                    //                 className='w-100'
-                                    //                 src={item.link}
-                                    //                 initial={{ height: 0 }}
-                                    //                 animate={{ height: isVisible[index] ? 600 : 0 }}
-                                    //                 transition={{ duration: 0.3 }} // Duration of the animation (in seconds)
-                                    //             >
-                                    //                 {/* <iframe className="w-100 " id="Frame1" src={item.link} title="description" /> */}
-                                    //             </motion.iframe>
-
-                                    //             <p className="s-description">
-                                    //                 {item.desc}  <a target="_blank" style={{ margin: '0 10px' }} className="btn btn-success text-light" href={item.link}>Visit site</a>
-                                    //             </p>
-                                    //         </div>
-                                    //     </div>
-                                    // </div>
+                                   
                                     <ProjectCard
                                         key={index}
                                         {...FrontEnd[index]}

@@ -2,14 +2,13 @@ import React, { useRef } from 'react'
 import { motion, useInView, useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
 
-export default function Reveal({ children }) {
+export default function Reveal({ children ,...props}) {
     const ref = useRef(null)
     const mainControls = useAnimation()
     const slideControls = useAnimation()
     const isInView = useInView(ref, { once: true })
 
     useEffect(() => {
-        console.log(isInView);
         if (isInView) {
             mainControls.start("visible")
             slideControls.start("visible")
@@ -17,7 +16,7 @@ export default function Reveal({ children }) {
     }, [isInView])
 
     return (
-        <div ref={ref} className='fitContent position-relative'>
+        <div ref={ref} className={`${(props.width == 'full')? 'w-100':'fitContent'} position-relative`}>
             <motion.div variants={{
                 hidden: { opacity: 0, y: 40 },
                 visible: { opacity: 1, y: 0 }
