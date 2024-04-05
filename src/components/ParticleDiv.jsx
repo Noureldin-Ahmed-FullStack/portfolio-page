@@ -3,8 +3,11 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { TypeAnimation } from 'react-type-animation';
+import Reveal from './Reveal';
 import { useCallback, useMemo } from "react";
 import "../css/ParticleDiv.css";
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 // import { loadBasic } from "@tsparticles/basic";
 
 import particlesOptions from "../particles.json";
@@ -40,115 +43,115 @@ export default function ParticleDiv() {
           },
         },
       },
-        particles: {
-          number: {
-            value: 355,
-            density: {
-              enable: true,
-              value_area: 789.1476416322727
-            }
+      particles: {
+        number: {
+          value: 355,
+          density: {
+            enable: true,
+            value_area: 789.1476416322727
+          }
+        },
+        color: {
+          value: "#ffffff"
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000"
           },
-          color: {
-            value: "#ffffff"
+          polygon: {
+            nb_sides: 5
           },
-          shape: {
-            type: "circle",
-            stroke: {
-              width: 0,
-              color: "#000000"
-            },
-            polygon: {
-              nb_sides: 5
-            },
-            image: {
-              src: "img/github.svg",
-              width: 100,
-              height: 100
-            }
-          },
-          opacity: {
-            value: 0.48927153781200905,
-            random: false,
-            anim: {
-              enable: true,
-              speed: 0.2,
-              opacity_min: 0,
-              sync: false
-            }
-          },
-          size: {
-            value: 2,
-            random: true,
-            anim: {
-              enable: true,
-              speed: 2,
-              size_min: 0,
-              sync: false
-            }
-          },
-          line_linked: {
-            enable: false,
-            distance: 150,
-            color: "#ffffff",
-            opacity: 0.4,
-            width: 1
-          },
-          move: {
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100
+          }
+        },
+        opacity: {
+          value: 0.48927153781200905,
+          random: false,
+          anim: {
             enable: true,
             speed: 0.2,
-            direction: "none",
-            random: true,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: {
-              enable: false,
-              rotateX: 600,
-              rotateY: 1200
-            }
+            opacity_min: 0,
+            sync: false
           }
         },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: {
-              enable: true,
-              mode: "bubble"
-            },
-            onclick: {
-              enable: true,
-              mode: "push"
-            },
-            resize: true
+        size: {
+          value: 2,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 2,
+            size_min: 0,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: false,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 0.2,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "bubble"
           },
-          modes: {
-            grab: {
-              distance: 400,
-              line_linked: {
-                opacity: 1
-              }
-            },
-            bubble: {
-              distance: 83.91608391608392,
-              size: 1,
-              duration: 3,
-              opacity: 1,
-              speed: 3
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4
-            },
-            push: {
-              particles_nb: 4
-            },
-            remove: {
-              particles_nb: 2
-            }
-          }
+          onclick: {
+            enable: true,
+            mode: "push"
+          },
+          resize: true
         },
-        retina_detect: true
-      }
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1
+            }
+          },
+          bubble: {
+            distance: 83.91608391608392,
+            size: 1,
+            duration: 3,
+            opacity: 1,
+            speed: 3
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          },
+          remove: {
+            particles_nb: 2
+          }
+        }
+      },
+      retina_detect: true
+    }
 
   }, []);
   const options = useMemo(() => {
@@ -269,27 +272,31 @@ export default function ParticleDiv() {
       {init && <Particles id="tsparticles" options={options} />}
       <div className='row w-100 justify-content-between'>
         <div className="col-md-7 d-flex flex-column justify-content-center">
-          <h1>welcome to my Portfolio</h1>
-          <h2>
-            <TypeAnimation
-              className=' typer'
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                "Hi! I'm Nour",
-                2000, // wait 1s before replacing "Mice" with "Hamsters"
-                "Hi! I'm  a Web Developer",
-                1000,
-                "Hi! I'm  a M.E.R.N stack engineer",
-                1000,
-                "Hi! I'm  a Full stack web Developer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{ fontSize: '1.5em', display: 'inline-block' }}
-              repeat={Infinity}
-            />
-          </h2>
+          <Reveal>
+            <h1>welcome to my Portfolio</h1>
+          </Reveal>
+          <Reveal>
+            <h2>
+              <TypeAnimation
+                className=' typer'
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "Hi! I'm Nour",
+                  2000, // wait 1s before replacing "Mice" with "Hamsters"
+                  "Hi! I'm  a Web Developer",
+                  1000,
+                  "Hi! I'm  a M.E.R.N stack engineer",
+                  1000,
+                  "Hi! I'm  a Full stack web Developer",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: '1.5em', display: 'inline-block' }}
+                repeat={Infinity}
+              />
+            </h2>
+          </Reveal>
 
           <p className='aboutParagraph'>
             Motivated computer science student proficient in JavaScript, MS SQL, HTML, CSS, Bootstrap, and React, eager to apply skills in dynamic team environments for real-world software development experience.
@@ -297,8 +304,12 @@ export default function ParticleDiv() {
         </div>
         <div className="col-md-5 d-flex merienda flex-column justify-content-center align-items-center my-order-md-first">
           <div className='LogoImage'>
-            <img className='MainLogo' src={require('../Img/BG Logo.png')} alt="" />
-
+            <TrackVisibility once>
+              {({ isVisible }) =>
+                <div className={`${isVisible ? "animate__animated animate__rollIn d-static" : "d-none"}`}>
+                  <img className='MainLogo' src={require('../Img/BG Logo.png')} alt="" />
+                </div>}
+            </TrackVisibility>
           </div>
           {/* <h1 className='bgText'>Noureldin</h1> */}
 

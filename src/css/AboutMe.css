@@ -3,7 +3,7 @@
     --secondary-color: #1436f0; */
     --primary-color: #e58c12;
     --secondary-color: #1436f0;
-
+    --brand: #e600e9;
 
     --primary-colorDark: #e600e9;
     --aqua: #3cf0c5;
@@ -63,6 +63,9 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+.fitContent{
+  width: fit-content;
 }
 /* .customBg {
 
