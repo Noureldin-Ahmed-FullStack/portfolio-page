@@ -3,8 +3,9 @@
     --secondary-color: #1436f0; */
     --primary-color: #e58c12;
     --secondary-color: #1436f0;
-    --brand: #e600e9;
-
+    --brand: linear-gradient(-45deg, #95307262, #46309f62);
+    /* #953072
+    #46309f */
     --primary-colorDark: #e600e9;
     --aqua: #3cf0c5;
     --secondary-colorDark: #e58c12;
@@ -25,6 +26,7 @@
   }
   [data-theme="dark"] {
     --bg-container: #1e1e1e;
+    --brand: linear-gradient(-45deg, #953072, #46309f);
     --bg-grey: #2e2e2e;
     --text-grey: #ffffff;
     --paragraph-grey:rgba(184, 184, 184, 0.774);
@@ -109,11 +111,11 @@ body{
     color: var(--bg-grey);
     background-color: var(--bg-grey);
 }
-@font-face {
+/* @font-face { */
 /* 
     font-family: Kopius;
     src: url(CSS/Kopius-Light.otf) */
-}
+/* } */
 .scroller{
     display: none;
     cursor: pointer;

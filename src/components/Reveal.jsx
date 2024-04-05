@@ -43,6 +43,7 @@ export default function Reveal({ children }) {
                     bottom: 0,
                     left: 0,
                     right: 0,
+                    borderRadius: "3px",
                     background: "var(--brand)",
                     zIndex: 20,
                 }}
