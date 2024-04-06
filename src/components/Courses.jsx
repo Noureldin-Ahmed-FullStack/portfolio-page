@@ -2,11 +2,12 @@ import React from 'react'
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+import ImageModal from './ImageModal';
 export default function Courses() {
   return (
     <section id="courses">
       <div className="courses">
-        <div className="container cont my-5">
+        <div className="container d-flex justify-content-center cont my-5">
           <div className="row container">
             <h3 className="lul-title text-center mt-4">Courses</h3>
             <h4 className="lul-title mb-3 text-center">Route center: Full-Stack Diploma</h4>
@@ -51,7 +52,14 @@ export default function Courses() {
                 {({ isVisible }) =>
                   <div className={`${isVisible ? "animate__animated animate__fadeInRight d-static" : "d-none"}`}>
                     <div className="d-flex justify-content-center">
-                      <a className="my-link vbox-item" data-gall="gallery02" target='_blank' href="https://iili.io/Jw2fEqg.png"><img className="w-100 rounded shadow-lg " src="https://iili.io/Jw2fEqg.png" /></a>
+                      <a className="my-link vbox-item" data-gall="gallery02" target='_blank' href="https://iili.io/Jw2fEqg.png">
+                      <img className="w-100 rounded shadow-lg " src="https://iili.io/Jw2fEqg.png" />
+                      </a>
+                      {/* <ImageModal
+                        imageUrl="https://iili.io/Jw2fEqg.png"
+                        thumbnailUrl="https://iili.io/Jw2fEqg.png"
+                        alt="certificate"
+                      /> */}
                     </div>
                   </div>}
               </TrackVisibility>
@@ -62,17 +70,17 @@ export default function Courses() {
               <TrackVisibility once>
                 {({ isVisible }) =>
                   <div className={`${isVisible ? "animate__animated animate__fadeInLeft d-static" : "d-none"}`}>
-              <h6 className="lul-title">Course content:</h6>
-              <ul>
-                <li>[HTML5, CSS3 , C#]</li>
-                <li>Database &amp; SQL</li>
-                <li>Front-End and Back-End Fundamentals</li>
-                <li>Bootstrap</li>
-                <li>Programing language Core</li>
-                <li>entity framework</li>
-                <li>Asp.NET Core</li>
-              </ul>
-              </div>}
+                    <h6 className="lul-title">Course content:</h6>
+                    <ul>
+                      <li>[HTML5, CSS3 , C#]</li>
+                      <li>Database &amp; SQL</li>
+                      <li>Front-End and Back-End Fundamentals</li>
+                      <li>Bootstrap</li>
+                      <li>Programing language Core</li>
+                      <li>entity framework</li>
+                      <li>Asp.NET Core</li>
+                    </ul>
+                  </div>}
               </TrackVisibility>
 
             </div>

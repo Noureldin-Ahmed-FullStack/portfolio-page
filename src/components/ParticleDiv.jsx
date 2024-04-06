@@ -254,7 +254,14 @@ export default function ParticleDiv() {
     };
   }, []);
   const [init, setInit] = useState(false);
-
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // scrollToTop()
+    }
+  };
   useEffect(() => {
     if (init) {
       return;
@@ -271,7 +278,7 @@ export default function ParticleDiv() {
     <div className="behindParticles text-left d-flex flex-column">
       {init && <Particles id="tsparticles" options={options} />}
       <div className='row w-100 justify-content-between'>
-        <div className="col-md-7 d-flex flex-column justify-content-center">
+        <div className="col-md-7 ps-5 d-flex flex-column justify-content-center">
           <Reveal>
             <h1>welcome to my Portfolio</h1>
           </Reveal>
@@ -301,6 +308,19 @@ export default function ParticleDiv() {
           <p className='aboutParagraph'>
             Motivated computer science student proficient in JavaScript, MS SQL, HTML, CSS, Bootstrap, and React, eager to apply skills in dynamic team environments for real-world software development experience.
           </p>
+
+          {/*  */}
+          <div id="container" className=' w-50'>
+            <button className="learn-more learnBTN w-100">
+              <span className="circle" aria-hidden="true">
+                <span className="icon arrow" />
+              </span>
+              <span className="learnBTN-text">Learn More</span>
+            </button>
+          </div>
+
+          {/*  */}
+
         </div>
         <div className="col-md-5 d-flex merienda flex-column justify-content-center align-items-center my-order-md-first">
           <div className='LogoImage'>

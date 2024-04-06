@@ -94,11 +94,15 @@ export default function AboutMe() {
                   <li>Framer-motion</li>
                   <li>React-Router-Dom</li>
                   <li>React-Pro-Sidebar</li>
-                  <li>ParticlesJS</li>
+                  <li>tsParticles</li>
+                  <li>react-multi-carousel</li>
+                  <li>react-on-screen</li>
+                  <li>react-bootstrap</li>
+                  <li>Three</li>
                   <li>Fontawesome</li>
                   <li>React-Firebase-hooks</li>
                   <li>Toastfy &amp; react-toastify</li>
-                  <li>Moment.js</li>
+                  {/* <li>Moment.js</li> */}
                 </ul>
               </div>
 
