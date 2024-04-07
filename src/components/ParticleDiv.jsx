@@ -310,12 +310,12 @@ export default function ParticleDiv() {
           </p>
 
           {/*  */}
-          <div id="container" className=' w-50'>
-            <button className="learn-more learnBTN w-100">
+          <div id="container" className=' '>
+            <button className="learn-more learnBTN w-100 " onClick={() => scrollToSection("ContactMe")}>
               <span className="circle" aria-hidden="true">
                 <span className="icon arrow" />
               </span>
-              <span className="learnBTN-text">Learn More</span>
+              <span className="learnBTN-text">Contact me</span>
             </button>
           </div>
 

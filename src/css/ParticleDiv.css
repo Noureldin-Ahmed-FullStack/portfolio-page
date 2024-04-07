@@ -191,7 +191,7 @@
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: #282936;
+  background: #fff;
   border-radius: 1.625rem;
 }
 .learnBTN.learn-more .circle .icon {
@@ -200,7 +200,7 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  background: #fff;
+  background: #282936;
 }
 .learnBTN.learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -216,8 +216,8 @@
   right: 0.0625rem;
   width: 0.625rem;
   height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
+  border-top: 0.125rem solid #282936;
+  border-right: 0.125rem solid #282936;
   transform: rotate(45deg);
 }
 .learnBTN.learn-more .learnBTN-text {
@@ -228,7 +228,7 @@
   /* right: 0; */
   bottom: 0;
   margin: 0 0 0 1.85rem;
-  color: #282936;
+  color: #fff;
   font-weight: 700;
   line-height: 1.6;
   text-align: center;
@@ -238,13 +238,18 @@
   width: 100%;
 }
 .learnBTN:hover .circle .icon.arrow {
-  background: #fff;
+  background: #282936;
   transform: translate(1rem, 0);
 }
 .learnBTN:hover .learnBTN-text {
-  color: #fff;
+  color: #282936;
+}
+.learnBTN-text{
+  display: flex;
+  align-items: center;
 }
   #container {
-    width: 3rem;
+    width: 17rem !important;
+    padding-bottom: 2rem;
   }
 /* Learn button */
