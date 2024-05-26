@@ -142,7 +142,7 @@ export default function Projects() {
                                                 <h2 className="lul-title">KarimStore</h2>
                                                 <p>
                                                     My personal CRUD app
-                                                    <a target="_blank" href="https://github.com/SSniperghosTT/KarimStore"><i className="fa-brands fa-github myIco" /></a>
+                                                    <a target="_blank" title='KarimStore' href="https://github.com/SSniperghosTT/KarimStore"><i className="fa-brands fa-github myIco" /></a>
                                                 </p>
                                                 <p>I created my First CRUD app using Asp.net with MVC 5, the goal was to
                                                     make an online shopping website for a small super market. the GitHub link can only show you the code;

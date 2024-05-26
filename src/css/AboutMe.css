@@ -243,7 +243,9 @@ body {
 .text-justify {
   text-align: justify;
 }
-
+.react-multiple-carousel__arrow {
+  z-index: 1 !important;
+}
 .text-left {
   text-align: left;
 }
