@@ -67,7 +67,7 @@ export default function Skills() {
                         <h5>Vite</h5>
                     </div>
                     <div className='item'>
-                        <CircularProgressBar className='' radius={50} progress={75} />
+                        <CircularProgressBar className='' radius={50} progress={85} />
                         <h5>Firebase</h5>
                     </div>
                     <div className='item'>

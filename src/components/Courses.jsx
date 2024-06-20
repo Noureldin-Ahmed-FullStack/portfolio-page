@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import Zoom from '@mui/material/Zoom';
+import { Tooltip } from '@mui/material';
 
 import ImageModal from './ImageModal';
 import '../css/ModalStyles.css';
@@ -88,12 +90,14 @@ export default function Courses() {
                 {({ isVisible }) =>
                   <div className={`${isVisible ? "animate__animated animate__fadeInRight d-static" : "d-none"}`}>
                     <div className="d-flex justify-content-center">
-                      <a className="my-link vbox-item" data-gall="gallery02" target='_blank' href="https://iili.io/Jw2fEqg.png">
-                        <img className="w-100 rounded shadow-lg " src="https://iili.io/Jw2fEqg.png" />
+                    <Tooltip followCursor TransitionComponent={Zoom} title="Click for full view">
+                      <a className="my-link vbox-item" data-gall="gallery02" target='_blank' href="https://ssniper.sirv.com/Images/CV/1.png">
+                        <img className="w-100 rounded shadow-lg " src="https://ssniper.sirv.com/Images/CV/1.png" />
                       </a>
+                      </Tooltip>
                       {/* <ImageModal
-                        imageUrl="https://iili.io/Jw2fEqg.png"
-                        thumbnailUrl="https://iili.io/Jw2fEqg.png"
+                        imageUrl="https://ssniper.sirv.com/Images/CV/1.png"
+                        thumbnailUrl="https://ssniper.sirv.com/Images/CV/1.png"
                         alt="certificate"
                       /> */}
                     </div>
@@ -101,8 +105,8 @@ export default function Courses() {
               </TrackVisibility>
             </div>
 
-            <div className="col-md-12">
-              <h4 className="lul-title mt-3 text-center">Russian Culture Center: Web Developing Diploma</h4>
+            <h4 className="lul-title mt-3 text-center">Russian Culture Center: Web Developing Diploma</h4>
+            <div className="col-md-8">
               <TrackVisibility once>
                 {({ isVisible }) =>
                   <div className={`${isVisible ? "animate__animated animate__fadeInLeft d-static" : "d-none"}`}>
@@ -116,6 +120,22 @@ export default function Courses() {
                       <li>entity framework</li>
                       <li>Asp.NET Core</li>
                     </ul>
+                  </div>}
+              </TrackVisibility>
+
+            </div>
+            <div className="col-md-4">
+              <TrackVisibility once>
+                {({ isVisible }) =>
+                  <div className={`${isVisible ? "animate__animated animate__fadeInLeft d-static" : "d-none"}`}>
+                    <a className="my-link vbox-item" data-gall="gallery02" target='_blank' href="https://ssniper.sirv.com/Images/CV/2.png">
+                    <Tooltip followCursor TransitionComponent={Zoom} title="Click for full view">
+                    <div className=' RCC_certificate'>
+                        <img className="w-100 rounded shadow-lg mb-3" src="https://ssniper.sirv.com/Images/CV/2.png" />
+
+                    </div>
+                    </Tooltip>
+                      </a>
                   </div>}
               </TrackVisibility>
 

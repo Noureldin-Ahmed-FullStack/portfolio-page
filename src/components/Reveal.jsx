@@ -13,10 +13,10 @@ export default function Reveal({ children ,...props}) {
             mainControls.start("visible")
             slideControls.start("visible")
         }
-    }, [isInView])
+    }, [isInView,mainControls,slideControls])
 
     return (
-        <div ref={ref} className={`${(props.width == 'full')? 'w-100':'fitContent'} position-relative`}>
+        <div ref={ref} className={`${(props.width === 'full')? 'w-100':'fitContent'} position-relative`}>
             <motion.div variants={{
                 hidden: { opacity: 0, y: 40 },
                 visible: { opacity: 1, y: 0 }

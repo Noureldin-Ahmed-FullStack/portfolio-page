@@ -23,12 +23,12 @@ export default function Projects() {
     }, {
         title: "DevFolio",
         imageUrl: "https://ssniper.sirv.com/Images/portfolio%20pictures/5.png",
-        link: "https://noureldin-ahmed-fullstack.github.io/Assignment-4/",
+        link: "https://noureldin-ahmed-fullstack.github.io/Assignment-6/",
         describtion: "Front-End Portfolio project"
     }, {
         title: "Fokir",
         imageUrl: "https://ssniper.sirv.com/Images/portfolio%20pictures/7.png",
-        link: "https://noureldin-ahmed-fullstack.github.io/Assignment-6/",
+        link: "https://noureldin-ahmed-fullstack.github.io/Assignment-4/",
         describtion: "Front-End Portfolio project"
     }, {
         //     title: "Realtime Weather app",

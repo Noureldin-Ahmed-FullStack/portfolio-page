@@ -69,7 +69,7 @@ export default function AboutMe() {
                         Web Development Diploma</a>
                     </p>
                   </Reveal>
-                  <a href="pdfs/My_CV.pdf" target="_blank" download>
+                  <a href="https://ssniper.sirv.com/Images/CV/Noureldin%20Resume.pdf" target="_blank" download>
                     <button id="cvBtn" className="btn text-light orange w-100">Download CV</button>
                   </a>
                 </div>

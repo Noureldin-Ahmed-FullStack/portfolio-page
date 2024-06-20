@@ -25,10 +25,10 @@ export default function Layout() {
   }
   useEffect(() => {
     const theme = localStorage.getItem('theme')
-    if (theme == "dark") {
-      setDarkmodeFunc()
-    }else{
+    if (theme == "light") {
       setLightmodeFunc()
+    }else{
+      setDarkmodeFunc()
     }
   }, [])
   

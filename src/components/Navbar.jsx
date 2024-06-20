@@ -5,6 +5,8 @@ import '../css/navbar.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { MyContext } from './ContextProvider';
 
+import Zoom from '@mui/material/Zoom';
+import { Tooltip } from '@mui/material';
 function App() {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const { darkMode, setDarkmode } = useContext(MyContext);
@@ -74,9 +76,17 @@ function App() {
                         <li className="nav-item myNavColor mx-2"><a className="nav-link cursor" onClick={() => scrollToSection("courses")} >COURSES</a></li>
                         <li className="nav-item myNavColor mx-2"><a className="nav-link cursor" onClick={() => scrollToSection("projects")} >PROJECTs</a></li>
                         <li className="nav-item myNavColor mx-2"><a className="nav-link cursor" onClick={() => scrollToSection("ContactMe")} >Contact me</a></li>
-                        <li className="nav-item myNavColor "><a title='Github' href='https://github.com/Noureldin-Ahmed-FullStack' target='_blank' className="nav-link cursor" ><i className='fa-brands fa-github'></i></a></li>
+
+                        <Tooltip followCursor TransitionComponent={Zoom} title="Github">
+                            <li className="nav-item myNavColor "><a title='Github' href='https://github.com/Noureldin-Ahmed-FullStack' target='_blank' className="nav-link cursor" ><i className='fa-brands fa-github'></i></a></li>
+                        </Tooltip>
+                        
+                        <Tooltip followCursor TransitionComponent={Zoom} title="Linkedin">
                         <li className="nav-item myNavColor "><a title='Linkedin' href='https://www.linkedin.com/in/noureldin-ahmed-7849801a7/' target='_blank' className="nav-link cursor" ><i className='fa-brands fa-linkedin'></i></a></li>
+                        </Tooltip>
+                        <Tooltip followCursor TransitionComponent={Zoom} title="Toggle Darkmode">
                         <li className="nav-item myNavColor "><a title='Darkmode' className="nav-link cursor" onClick={() => toggleDarkmode()} ><i className={`${darkMode ? 'fa' : 'fa-regular'} fa-moon`}></i></a></li>
+                        </Tooltip>
                     </ul>
                 </Navbar.Collapse>
             </Container>
