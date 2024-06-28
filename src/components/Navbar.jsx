@@ -183,7 +183,7 @@ function App() {
           <Box
             sx={{ display: { xs: 'flex', md: 'none' }, my: 2, mr: 1 }}
           >
-            <img src={NourLogo} className='icon me-3' />
+            <img src={"/BG Logo.png"} className='icon me-3' />
           </Box>
           <Typography
             variant="h5"
