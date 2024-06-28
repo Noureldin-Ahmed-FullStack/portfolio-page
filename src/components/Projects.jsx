@@ -136,7 +136,6 @@ export default function Projects() {
                                         <div >
                                             <div className="container">
                                                 
-                                                <iframe className="w-100" style={{ borderRadius: '2rem', margin: '20px 0' }} height={315} src="https://www.youtube.com/embed/sLnUgg14i-A?si=Peaxs4-MtaOuoasW" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true} />
                                             </div>
                                             <div className="service-content">
                                                 <h2 className="lul-title">KarimStore</h2>

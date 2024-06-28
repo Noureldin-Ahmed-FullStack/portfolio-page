@@ -327,7 +327,7 @@ export default function ParticleDiv() {
             <TrackVisibility once>
               {({ isVisible }) =>
                 <div className={`${isVisible ? "animate__animated animate__rollIn d-static" : "d-none"}`}>
-                  <img className='MainLogo' src={require('../Img/BG Logo.png')} alt="" />
+                  <img className='MainLogo' src={'../Img/BG Logo.png'} alt="" />
                 </div>}
             </TrackVisibility>
           </div>
