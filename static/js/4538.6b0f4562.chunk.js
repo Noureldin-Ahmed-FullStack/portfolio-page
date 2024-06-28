@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkportfolio_page=self.webpackChunkportfolio_page||[]).push([[4538],{4538:(e,t,r)=>{r.d(t,{ShapeManager:()=>p});const a=new Map;class p{constructor(e){this._engine=e}addShapeGenerator(e,t){this.getShapeGenerator(e)||a.set(e,t)}getShapeGenerator(e){return a.get(e)}getSupportedShapeGenerators(){return a.keys()}}}}]);
-//# sourceMappingURL=4538.6b0f4562.chunk.js.map
