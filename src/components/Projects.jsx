@@ -51,6 +51,16 @@ export default function Projects() {
         imageUrl: "https://ssniper.sirv.com/Images/portfolio%20pictures/wuzzuf.jpg",
         link: "https://github.com/Noureldin-Ahmed-FullStack/Ecommerce-server",
         describtion: "just a wuzzuf clone NodeJS app I was working on for learning Node & ExpressJS"
+    }, {
+        title: "Clerk Notes Server",
+        imageUrl: "https://ssniper.sirv.com/Images/portfolio%20pictures/vet.jpg",
+        link: "https://github.com/Noureldin-Ahmed-FullStack/Clerk-Notes-Server",
+        describtion: "sticky note app node/mongo server"
+    }, {
+        title: "VetRo-server",
+        imageUrl: "https://ssniper.sirv.com/Images/portfolio%20pictures/note.jpg",
+        link: "https://github.com/Noureldin-Ahmed-FullStack/VetRo-server",
+        describtion: "VetRo Graduation project node/mongo server"
     }]
     const [isVisible, setIsVisible] = useState(Array(FrontEnd.length).fill(false));
 

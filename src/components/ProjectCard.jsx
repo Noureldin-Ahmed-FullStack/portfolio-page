@@ -11,7 +11,7 @@ export default function ProjectCard({ title, link, describtion, imageUrl,tooltip
         <div className=''>
           <a target='_blank' href={link}>
             <div className='proj-imgbx rounded-3'>
-              <img alt={title} className='w-100 rounded-3' src={imageUrl}/>
+              <img alt={title} className='w-100 aspectRatio rounded-3' src={imageUrl}/>
               <div className='proj-txtx rounded-3'>
                 <h4 className='hider'>{title}</h4>
                 <span className='hider'>{describtion}</span>

@@ -13,6 +13,10 @@
 
 
 }
+.aspectRatio{
+    aspect-ratio: 16/9;
+    object-fit: fill;
+}
 .WatchOnYt{
     max-width: 300px;
 }
