@@ -163,28 +163,28 @@ export default function ParticleDiv() {
         enable: false, // enabling this will make the canvas fill the entire screen, it's enabled by default
         zIndex: 0, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
       },
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true, // enables the click event
-            mode: "push", // adds the particles on click
-          },
-          resize: true,
-          onHover: {
-            enable: true, // enables the hover event
-            mode: "repulse", // make the particles run away from the cursor
-          },
-        },
-        modes: {
-          push: {
-            quantity: 1, // number of particles to add on click
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4
-          },
-        },
-      },
+      // interactivity: {
+      //   events: {
+      //     onClick: {
+      //       enable: true, // enables the click event
+      //       mode: "push", // adds the particles on click
+      //     },
+      //     resize: true,
+      //     onHover: {
+      //       enable: true, // enables the hover event
+      //       mode: "repulse", // make the particles run away from the cursor
+      //     },
+      //   },
+      //   modes: {
+      //     push: {
+      //       quantity: 1, // number of particles to add on click
+      //     },
+      //     repulse: {
+      //       distance: 200,
+      //       duration: 0.4
+      //     },
+      //   },
+      // },
       particles: {
         number: {
           value: 300,
@@ -278,7 +278,7 @@ export default function ParticleDiv() {
     <div className="behindParticles text-left d-flex flex-column">
       {init && <Particles id="tsparticles" options={options} />}
       <div className='row w-100 justify-content-between'>
-        <div className="col-md-7 ps-5 d-flex flex-column justify-content-center">
+        <div className="col-md-8 ps-5 d-flex flex-column justify-content-center">
           <Reveal>
             <h1>welcome to my Portfolio</h1>
           </Reveal>
@@ -322,7 +322,7 @@ export default function ParticleDiv() {
           {/*  */}
 
         </div>
-        <div className="col-md-5 d-flex merienda flex-column justify-content-center align-items-center my-order-md-first">
+        <div className="col-md-4 d-flex merienda flex-column justify-content-center align-items-center my-order-md-first">
           <div className='LogoImage'>
             <TrackVisibility once>
               {({ isVisible }) =>

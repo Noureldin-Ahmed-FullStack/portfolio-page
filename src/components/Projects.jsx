@@ -152,7 +152,7 @@ export default function Projects() {
                                                 <div className=" mb-3">
                                                     {/* <img className='w-100 rounded-3' src="src/assets/YT.png" alt="" /> */}
                                                     <ProjectCard
-                                                        title="ASP.NET APP" link="https://youtu.be/sLnUgg14i-A?si=inn4GgCKqKTJhr3z" describtion="Watch on Youtube!" imageUrl="src/assets/YT.png" tooltip={"Watch on Youtube!"}
+                                                        title="ASP.NET APP" link="https://youtu.be/sLnUgg14i-A?si=inn4GgCKqKTJhr3z" describtion="Watch on Youtube!" imageUrl="https://ssniper.sirv.com/Images/portfolio%20pictures/YT.png" tooltip={"Watch on Youtube!"}
                                                     />
                                                 </div>
                                             </div>

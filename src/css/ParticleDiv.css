@@ -39,6 +39,20 @@
   .my-order-md-first {
     order: -1 !important
   }
+}@media screen and (max-width: 1278px) {
+  .typer {
+    line-height: 1.2em;
+    /* Adjust the value as needed */
+    min-height: 2.4em;
+    /* 1.2em (line-height) * 2 (lines) = 2.4em */
+    overflow: hidden;
+    /* Optional: hide overflow content */
+  }
+}
+@media screen and (max-width: 600px) {
+  .typer {
+    min-height: 3.6em;  /* Adjust based on your new line-height */
+  }
 }
 
 @media screen and (max-width: 1278px) {
