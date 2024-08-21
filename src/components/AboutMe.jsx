@@ -69,8 +69,8 @@ export default function AboutMe() {
                         Web Development Diploma</a>
                     </p>
                   </Reveal>
-                  <a href="https://ssniper.sirv.com/Images/CV/Noureldin%20Resume.pdf" target="_blank" download>
-                    <button id="cvBtn" className="btn text-light orange w-100">Download CV</button>
+                  <a href="https://flowcv.com/resume/essa0p6nq8" target="_blank">
+                    <button id="cvBtn" className="btn text-light orange w-100">View CV</button>
                   </a>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function AboutMe() {
                   Backend Libraries I use
                 </h5>
                 <ul>
-                  <li>Firesore</li>
+                  <li>Firestore</li>
                   <li>Nodemailer</li>
                   <li>Express</li>
                   <li>Axios</li>

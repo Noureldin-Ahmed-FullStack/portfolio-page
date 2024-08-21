@@ -31,14 +31,9 @@ export default function Projects() {
         link: "https://noureldin-ahmed-fullstack.github.io/Assignment-4/",
         describtion: "Front-End Portfolio project"
     }, {
-        //     title: "Realtime Weather app",
-        //     imageUrl:"https://ssniper.sirv.com/Images/portfolio%20pictures/6.png",
-        //     link: "https://noureldin-ahmed-fullstack.github.io/Assignment-11/",
-        //     describtion: "Realtime Weather app Front-End Fully Functional Real-time whether system using wheather api. "
-        // }, {
-        title: "Yummy",
-        imageUrl: "https://ssniper.sirv.com/Images/portfolio%20pictures/3.png",
-        link: "https://noureldin-ahmed-fullstack.github.io/Yummy/",
+        title: "Walter White recipes",
+        imageUrl: "https://ssniper.sirv.com/Images/other%20projects/Recipes.png",
+        link: "https://walter-white-recipes.vercel.app/",
         describtion: "Front end Recipe assistant"
     },]
     const BackEnd = [{
@@ -53,14 +48,33 @@ export default function Projects() {
         describtion: "just a wuzzuf clone NodeJS app I was working on for learning Node & ExpressJS"
     }, {
         title: "Clerk Notes Server",
-        imageUrl: "https://ssniper.sirv.com/Images/portfolio%20pictures/vet.jpg",
+        imageUrl: "https://ssniper.sirv.com/Images/portfolio%20pictures/note.jpg",
         link: "https://github.com/Noureldin-Ahmed-FullStack/Clerk-Notes-Server",
         describtion: "sticky note app node/mongo server"
     }, {
         title: "VetRo-server",
-        imageUrl: "https://ssniper.sirv.com/Images/portfolio%20pictures/note.jpg",
+        imageUrl: "https://ssniper.sirv.com/Images/portfolio%20pictures/vet.jpg",
         link: "https://github.com/Noureldin-Ahmed-FullStack/VetRo-server",
         describtion: "VetRo Graduation project node/mongo server"
+    }]
+    const Freelance = [{
+        title: "El Amir",
+        imageUrl: "https://ssniper.sirv.com/Images/other%20projects/123.jpg",
+        link: "https://battery-store.vercel.app/",
+        describtion: "Online store for a small business.",
+        longDescribtion: "Online store for a small business that sells car batteries."
+    }, {
+        title: "Map Navigation App",
+        imageUrl: "https://ssniper.sirv.com/Images/other%20projects/map.png",
+        link: "https://map-app-two-beta.vercel.app/",
+        describtion: "Was hired to create a Map navigation project.",
+        longDescribtion: "Was hired to create a Map navigation project for a group of students, The aim was to be able to convert coordinates to and from the map"
+    }, {
+        title: "Tourguide Personal Portfolio",
+        imageUrl: "https://ssniper.sirv.com/Images/other%20projects/tourguide.png",
+        link: "https://ahmed-aslia.vercel.app/",
+        describtion: "Freelance Tourguide Portfolio",
+        longDescribtion: "Hired to design a Personal Tourguide Portfolio for him to advertise his own freelance services",
     }]
     const [isVisible, setIsVisible] = useState(Array(FrontEnd.length).fill(false));
 
@@ -110,7 +124,7 @@ export default function Projects() {
                             <Nav.Link eventKey={"second"}>Backend</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey={"third"}>Asp.NET</Nav.Link>
+                            <Nav.Link eventKey={"third"}>Freelance</Nav.Link>
                         </Nav.Item>
                     </Nav>
                     <Tab.Content>
@@ -140,36 +154,14 @@ export default function Projects() {
                             </Row>
                         </Tab.Pane>
                         <Tab.Pane eventKey="third">
-                            <Row>
-                                <div>
-                                    <div className="col-md-12">
-                                        <div >
-                                            <div className="container">
-
-                                            </div>
-                                            <div className="service-content">
-                                                <h2 className="lul-title">KarimStore</h2>
-                                                <p>
-                                                    My personal CRUD app
-                                                    <a target="_blank" title='KarimStore' href="https://github.com/SSniperghosTT/KarimStore"><i className="fa-brands fa-github myIco" /></a>
-                                                </p>
-                                                <p>I created my First CRUD app using Asp.net with MVC 5, the goal was to
-                                                    make an online shopping website for a small super market. the GitHub link can only show you the code;
-                                                    If
-                                                    you would like to view the
-                                                    application; I have a video showcasing the app.
-                                                </p>
-                                                <div className=" mb-3">
-                                                    {/* <img className='w-100 rounded-3' src="src/assets/YT.png" alt="" /> */}
-                                                    <ProjectCard
-                                                        title="ASP.NET APP" link="https://youtu.be/sLnUgg14i-A?si=inn4GgCKqKTJhr3z" describtion="Watch on Youtube!" imageUrl="https://ssniper.sirv.com/Images/portfolio%20pictures/YT.png" tooltip={"Watch on Youtube!"}
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                            <h2 className="lul-title mb-3">My Freelance Paid Projects</h2>
+                            <Row className='gy-3 pb-2'>
+                                {Freelance.map((item, index) => (
+                                    <ProjectCard
+                                        key={index}
+                                        {...Freelance[index]}
+                                    />
+                                ))}
                             </Row>
                         </Tab.Pane>
                     </Tab.Content>

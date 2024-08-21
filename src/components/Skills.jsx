@@ -55,6 +55,10 @@ export default function Skills() {
                         <h5>ReactJS</h5>
                     </div>
                     <div className='item'>
+                        <CircularProgressBar className='' radius={50} progress={85} />
+                        <h5>NextJS</h5>
+                    </div>
+                    <div className='item'>
                         <CircularProgressBar className='' radius={50} progress={90} />
                         <h5>NodeJS</h5>
                     </div>
@@ -63,8 +67,8 @@ export default function Skills() {
                         <h5>Express</h5>
                     </div>
                     <div className='item'>
-                        <CircularProgressBar className='' radius={50} progress={90} />
-                        <h5>Vite</h5>
+                        <CircularProgressBar className='' radius={50} progress={96} />
+                        <h5>Typescript</h5>
                     </div>
                     <div className='item'>
                         <CircularProgressBar className='' radius={50} progress={85} />
