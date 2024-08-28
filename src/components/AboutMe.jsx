@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../css/AboutMe.css";
 import pic1 from '../Img/AboutImage3.png';
 import Reveal from './Reveal';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { MyContext } from './ContextProvider';
 
 export default function AboutMe() {
 
+  const { darkMode } = useContext(MyContext);
   return (
 
     <div id='about' className="container rounded-2 my-3 cont p-5 pt-3">
@@ -52,7 +54,7 @@ export default function AboutMe() {
                   <Reveal>
                     <p className="lead text-left">
                       <span className="makeBold">University: </span>
-                      High Institute of Culture and Science [Undergrade], Bachelor of Science in Computer Science, [2024].
+                      High Institute of Culture and Science, Bachelor of Science in Computer Science, [2024].
                     </p>
                   </Reveal>
                   <div className="title-box-2">
@@ -69,9 +71,12 @@ export default function AboutMe() {
                         Web Development Diploma</a>
                     </p>
                   </Reveal>
-                  <a href="https://flowcv.com/resume/essa0p6nq8" target="_blank">
+                  {/* <a href="https://flowcv.com/resume/essa0p6nq8" target="_blank">
                     <button id="cvBtn" className="btn text-light orange w-100">View CV</button>
-                  </a>
+                  </a> */}
+
+                  <a href="https://flowcv.com/resume/essa0p6nq8" className={`btn ${darkMode? 'btn-6': 'btn-5'} w-100`}>Check CV</a>
+                  
                 </div>
               </div>
             </div>

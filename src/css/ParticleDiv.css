@@ -23,7 +23,7 @@
 
 .aboutParagraph {
   font-size: 22px;
-  width: 80%;
+  /* width: 80%; */
   color: rgba(240, 248, 255, 0.822);
 }
 
@@ -51,7 +51,7 @@
 }
 @media screen and (max-width: 600px) {
   .typer {
-    min-height: 3.6em;  /* Adjust based on your new line-height */
+    min-height: 2.4em;  /* Adjust based on your new line-height */
   }
 }
 

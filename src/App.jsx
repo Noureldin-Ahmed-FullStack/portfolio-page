@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './css/buttons.css';
 import Layout from './components/Layout';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import MyContextProvider from './components/ContextProvider';
