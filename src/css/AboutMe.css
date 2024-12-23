@@ -113,6 +113,9 @@
   color: var(--links);
 }
 
+.pointer{
+  cursor: pointer !important;
+}
 a {
   /* CSS properties for all anchor elements */
   text-decoration: none;

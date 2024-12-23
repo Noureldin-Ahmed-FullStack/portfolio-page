@@ -9,13 +9,31 @@ import '../css/ModalStyles.css';
 import { AnimatePresence, motion } from 'framer-motion';
 import Modal from './Modal Stuff/Modal';
 import IconnedButton from './IconnedButton';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 export default function Courses() {
   const [modalOpen, setModalOpen] = useState(false);
 
+  const [LightboxOpen, setLightboxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const handleOpenLightbox = (index) => {
+    setCurrentIndex(index);
+    setLightboxOpen(true);
+  };
+  const Images = ["https://ssniper.sirv.com/Images/CV/1.png", "https://ssniper.sirv.com/Images/CV/2.png", "https://ssniper.sirv.com/Images/CV/1.jpg"]
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
   return (
     <section id="courses">
+      {LightboxOpen && (
+        <Lightbox
+          open={LightboxOpen}
+          close={() => setLightboxOpen(false)}
+          slides={Images.map((url) => ({ src: url }))}
+          index={currentIndex}
+          on={{ click: ({ index }) => setCurrentIndex(index) }}
+        />
+      )}
       <div className="courses">
         <div className="container d-flex justify-content-center cont my-5">
           <div className="row container">
@@ -90,10 +108,8 @@ export default function Courses() {
                 {({ isVisible }) =>
                   <div className={`${isVisible ? "animate__animated animate__fadeInRight d-static" : "d-none"}`}>
                     <div className="d-flex justify-content-center">
-                    <Tooltip followCursor TransitionComponent={Zoom} title="Click for full view">
-                      <a className="my-link vbox-item" data-gall="gallery02" target='_blank' href="https://ssniper.sirv.com/Images/CV/1.png">
-                        <img className="w-100 rounded shadow-lg " src="https://ssniper.sirv.com/Images/CV/1.png" />
-                      </a>
+                      <Tooltip followCursor TransitionComponent={Zoom} title="Click for full view">
+                        <img onClick={() => handleOpenLightbox(0)} className="w-100 rounded shadow-lg cursor" src="https://ssniper.sirv.com/Images/CV/1.png" />
                       </Tooltip>
                       {/* <ImageModal
                         imageUrl="https://ssniper.sirv.com/Images/CV/1.png"
@@ -129,13 +145,12 @@ export default function Courses() {
                 {({ isVisible }) =>
                   <div className={`${isVisible ? "animate__animated animate__fadeInLeft d-static" : "d-none"}`}>
                     <a className="my-link vbox-item" data-gall="gallery02" target='_blank' href="https://ssniper.sirv.com/Images/CV/2.png">
-                    <Tooltip followCursor TransitionComponent={Zoom} title="Click for full view">
-                    <div className=' RCC_certificate'>
-                        <img className="w-100 rounded shadow-lg mb-3" src="https://ssniper.sirv.com/Images/CV/2.png" />
-
-                    </div>
-                    </Tooltip>
-                      </a>
+                      <Tooltip followCursor TransitionComponent={Zoom} title="Click for full view">
+                        <div className=' RCC_certificate'>
+                          <img onClick={() => handleOpenLightbox(1)} className="w-100 rounded shadow-lg cursor" src="https://ssniper.sirv.com/Images/CV/2.png" />
+                        </div>
+                      </Tooltip>
+                    </a>
                   </div>}
               </TrackVisibility>
 

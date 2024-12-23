@@ -82,6 +82,10 @@ export default function Skills() {
                         <CircularProgressBar className='' radius={50} progress={80} />
                         <h5>SQL</h5>
                     </div>
+                    <div className='item'>
+                        <CircularProgressBar className='' radius={50} progress={100} />
+                        <h5>Tailwind CSS</h5>
+                    </div>
                 </Carousel>
 
             </div>
