@@ -13,7 +13,7 @@ export default function HeaderDiv() {
         }
       };
     return (
-        <div className='w-100 HeaderBG text-left bg-danger d-flex flex-column justify-content-center '>
+        <div className='w-100 HeaderBG text-left d-flex flex-column justify-content-center '>
             {/* <img className='w-100 position-absolute top-0 end-0' src="https://ssniper.sirv.com/Images/my%20portfolio/portfolio-bg.jpg" loading='eager' alt="Background Image" draggable={'false'} /> */}
             <div className='row w-100 justify-content-between z-3 '>
                 <div className="col-md-8 ps-5 d-flex flex-column justify-content-center">

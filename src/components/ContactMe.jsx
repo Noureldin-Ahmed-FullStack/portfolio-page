@@ -249,7 +249,7 @@ export default function ContactMe() {
                             </Col>
                             <Col md={6} className='d-flex flex-column'>
                                 <h2 className='mb-3'>Get in touch</h2>
-                                {formErrors && <div className='d-flex align-items-end mb-2 p-1 bg-danger-subtle text-danger-emphasis border-1 rounded-1'><h5 className='m-0 pe-1'>{formErrors}</h5> <h6 className='m-0 '>something wrong?</h6></div>}
+                                {formErrors && <div className='d-flex align-items-end mb-2 p-1 text-danger-emphasis border-1 rounded-1'><h5 className='m-0 pe-1'>{formErrors}</h5> <h6 className='m-0 '>something wrong?</h6></div>}
 
                                 <div className="w-100 flex-grow-1 contact">
                                     <form onSubmit={handleSubmit} className='w-100 h-100  d-flex flex-column'>
