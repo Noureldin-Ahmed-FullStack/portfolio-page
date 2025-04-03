@@ -44,7 +44,7 @@ export default function HeaderDiv() {
                     </Reveal>
 
                     <p className='aboutParagraph'>
-                        Motivated computer science student proficient in JavaScript, MS SQL, HTML, CSS, Bootstrap, and React, eager to apply skills in dynamic team environments for real-world software development experience.
+                    Motivated computer science student proficient in TypeScript, React, ExpressJs, Tailwind, MongoDB and Node, eager to apply skills in dynamic team environments for real-world software development experience.
                     </p>
 
                     {/*  */}

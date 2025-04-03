@@ -107,19 +107,19 @@ export default function AboutMe() {
                   Frontend Libraries I use
                 </h5>
                 <ul>
-                  <li>Bootstrap</li>
-                  <li>jQuery</li>
+                  <li>Tailwind CSS / Bootstrap</li>
                   <li>Framer-motion</li>
                   <li>React-Router-Dom</li>
                   <li>Material UI</li>
+                  <li>zustand</li>
                   <li>tsParticles</li>
                   <li>react-multi-carousel</li>
                   <li>react-on-screen</li>
                   <li>react-bootstrap</li>
-                  <li>Three</li>
-                  <li>Fontawesome</li>
+                  <li>ThreeJS</li>
+                  <li>tanstack react query</li>
                   <li>Aceternity UI</li>
-                  <li>Radix UI</li>
+                  <li>Axios</li>
                   <li>Toastfy &amp; react-toastify</li>
                   {/* <li>Moment.js</li> */}
                 </ul>
@@ -142,8 +142,9 @@ export default function AboutMe() {
                   <li>Firestore</li>
                   <li>Nodemailer</li>
                   <li>Express</li>
-                  <li>Axios</li>
                   <li>Socket.IO</li>
+                  <li>cloudinary</li>
+                  <li>multer</li>
                   <li>Joi</li>
                   <li>jsonwebtoken</li>
                   <li>GraphQL </li>

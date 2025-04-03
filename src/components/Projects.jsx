@@ -58,6 +58,18 @@ export default function Projects() {
         describtion: "VetRo Graduation project node/mongo server"
     }]
     const Freelance = [{
+        title: "Art By Julie",
+        imageUrl: "https://ssniper.sirv.com/Mal3aby%20Project/jj.png",
+        link: "https://artbyjulieulfeng.vercel.app/",
+        describtion: "Portfolio website for an artist.",
+        longDescribtion: "Portfolio website and Art Gallery for an artist to show off and sell her Artwork."
+    },{
+        title: "Captain Masr",
+        imageUrl: "https://ssniper.sirv.com/Mal3aby%20Project/field.jpg",
+        link: "https://captain-masr.vercel.app/",
+        describtion: "Sport Court Booking app.",
+        longDescribtion: "Sport Court Booking app for a start up company."
+    },{
         title: "El Amir",
         imageUrl: "https://ssniper.sirv.com/Images/other%20projects/123.jpg",
         link: "https://battery-store.vercel.app/",
@@ -118,18 +130,29 @@ export default function Projects() {
                     <Nav variant='pills' className='mb-4' defaultActiveKey="/home">
 
                         <Nav.Item>
-                            <Nav.Link eventKey={"first"}>Frontend</Nav.Link>
+                            <Nav.Link eventKey={"first"}>Freelance</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey={"second"}>Backend</Nav.Link>
+                            <Nav.Link eventKey={"second"}>Frontend</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey={"third"}>Freelance</Nav.Link>
+                            <Nav.Link eventKey={"third"}>Backend</Nav.Link>
                         </Nav.Item>
                     </Nav>
                     <Tab.Content>
                         <Tab.Pane eventKey="first">
-                            <h2 className="lul-title mb-3">My Front-End Projects</h2>
+                            <h2 className="lul-title mb-3">My Freelance Paid Projects</h2>
+                            <Row className='gy-3 pb-2'>
+                                {Freelance.map((item, index) => (
+                                    <ProjectCard
+                                        key={index}
+                                        {...Freelance[index]}
+                                    />
+                                ))}
+                            </Row>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="second">
+                            <h2 className="lul-title mb-3">My Front-End Personal Projects</h2>
                             {/* <p>Assignments given by <a className=" darkLink" target="_blank" href="https://www.facebook.com/Routelearning">Route Center</a> <em className=''>Eng: </em><a className="darkLink" target="_blank" href="https://www.facebook.com/ahmedmu3ti"><strong>Ahmed Mu3ti</strong></a>.</p> */}
                             <Row className='gy-3 pb-2'>
                                 {FrontEnd.map((item, index) => (
@@ -141,25 +164,14 @@ export default function Projects() {
                                 ))}
                             </Row>
                         </Tab.Pane>
-                        <Tab.Pane eventKey="second">
-                            <h2 className="lul-title mb-3">My Back-End Projects</h2>
+                        <Tab.Pane eventKey="third">
+                            <h2 className="lul-title mb-3">My Back-End Personal Projects</h2>
                             {/* <p>Assignments given by <a className=" darkLink" target="_blank" href="https://www.facebook.com/Routelearning">Route Center</a> <em className=''>Eng: </em><a className="darkLink" target="_blank" href="https://www.facebook.com/ahmedmu3ti"><strong>Ahmed Mu3ti</strong></a>.</p> */}
                             <Row className='gy-3 pb-2'>
                                 {BackEnd.map((item, index) => (
                                     <ProjectCard
                                         key={index}
                                         {...BackEnd[index]}
-                                    />
-                                ))}
-                            </Row>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="third">
-                            <h2 className="lul-title mb-3">My Freelance Paid Projects</h2>
-                            <Row className='gy-3 pb-2'>
-                                {Freelance.map((item, index) => (
-                                    <ProjectCard
-                                        key={index}
-                                        {...Freelance[index]}
                                     />
                                 ))}
                             </Row>

@@ -22,7 +22,7 @@ export default function MuiModal(props) {
                 onClose={handleClose}
                 aria-describedby="alert-dialog-slide-description"
             >
-                    <DialogTitle className='w-100 d-flex justify-content-between'><span>{data.title}</span><Button color='error' onClick={handleClose}>X</Button></DialogTitle>
+                    <DialogTitle className='w-100 d-flex justify-content-between'><span>{data.title}</span><Button color='error' variant='outlined' onClick={handleClose}>X</Button></DialogTitle>
 
                 <DialogContent className='pt-0'>
                     <a target='_blank' href={data.link}>
